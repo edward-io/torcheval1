@@ -10,7 +10,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Functional Metrics &mdash; TorchEval 0.0.3 documentation</title>
+  <title>Functional Metrics &mdash; TorchEval 0.0.4 documentation</title>
   
 
   
@@ -33,7 +33,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="tools" href="torcheval.tools.html" />
-    <link rel="prev" title="Metrics" href="torcheval.metrics.html" />
+    <link rel="prev" title="torcheval.metrics.WindowedBinaryNormalizedEntropy" href="generated/torcheval.metrics.WindowedBinaryNormalizedEntropy.html" />
   <!-- Google Analytics -->
   
   <!-- End Google Analytics -->
@@ -299,13 +299,13 @@
             <div role="main" class="main-content" itemscope="itemscope" itemtype="http://schema.org/Article">
              <article itemprop="articleBody" id="pytorch-article" class="pytorch-article">
               
-  <section id="functional-metrics">
-<h1>Functional Metrics<a class="headerlink" href="#functional-metrics" title="Permalink to this heading">¶</a></h1>
-<span class="target" id="module-torcheval.metrics.functional"></span><dl class="py function">
+  <section id="module-torcheval.metrics.functional">
+<span id="functional-metrics"></span><h1>Functional Metrics<a class="headerlink" href="#module-torcheval.metrics.functional" title="Permalink to this heading">¶</a></h1>
+<dl class="py function">
 <dt class="sig sig-object py" id="torcheval.metrics.functional.binary_accuracy">
 <span class="sig-prename descclassname"><span class="pre">torcheval.metrics.functional.</span></span><span class="sig-name descname"><span class="pre">binary_accuracy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="(in PyTorch v1.12)"><span class="pre">Tensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="(in PyTorch v1.12)"><span class="pre">Tensor</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="(in PyTorch v1.12)"><span class="pre">Tensor</span></a></span></span><a class="headerlink" href="#torcheval.metrics.functional.binary_accuracy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute binary accuracy score, which is the frequency of input matching target.
-Its class version is <a class="reference internal" href="torcheval.metrics.html#torcheval.metrics.BinaryAccuracy" title="torcheval.metrics.BinaryAccuracy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">torcheval.metrics.BinaryAccuracy</span></code></a>.</p>
+Its class version is <a class="reference internal" href="generated/torcheval.metrics.BinaryAccuracy.html#torcheval.metrics.BinaryAccuracy" title="torcheval.metrics.BinaryAccuracy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">torcheval.metrics.BinaryAccuracy</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -335,7 +335,7 @@ Its class version is <a class="reference internal" href="torcheval.metrics.html#
 
 <dl class="py function">
 <dt class="sig sig-object py" id="torcheval.metrics.functional.binary_auroc">
-<span class="sig-prename descclassname"><span class="pre">torcheval.metrics.functional.</span></span><span class="sig-name descname"><span class="pre">binary_auroc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="(in PyTorch v1.12)"><span class="pre">Tensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="(in PyTorch v1.12)"><span class="pre">Tensor</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_tasks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="(in PyTorch v1.12)"><span class="pre">Tensor</span></a></span></span><a class="headerlink" href="#torcheval.metrics.functional.binary_auroc" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">torcheval.metrics.functional.</span></span><span class="sig-name descname"><span class="pre">binary_auroc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="(in PyTorch v1.12)"><span class="pre">Tensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="(in PyTorch v1.12)"><span class="pre">Tensor</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_tasks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_fbgemm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="(in PyTorch v1.12)"><span class="pre">Tensor</span></a></span></span><a class="headerlink" href="#torcheval.metrics.functional.binary_auroc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute AUROC, which is the area under the ROC Curve, for binary classification.
 Its class version is <code class="docutils literal notranslate"><span class="pre">torcheval.metrics.BinaryAUROC</span></code>.</p>
 <dl class="field-list simple">
@@ -346,6 +346,11 @@ It should be predicted label, probabilities or logits with shape of (num_tasks, 
 <li><p><strong>target</strong> (<em>Tensor</em>) – Tensor of ground truth labels with shape of (num_tasks, n_sample) or (n_sample, ).</p></li>
 <li><p><strong>num_tasks</strong> (<em>int</em>) – Number of tasks that need BinaryAUROC calculation. Default value
 is 1. BinaryAUROC for each task will be calculated independently.</p></li>
+<li><p><strong>use_fbgemm</strong> (<em>bool</em>) – If set to True, use <code class="docutils literal notranslate"><span class="pre">fbgemm_gpu.metrics.auc</span></code> (a
+hand fused kernel).  FBGEMM AUC is an approximation of AUC. It does
+not mask data in case that input values are redundant. For the
+highly redundant input case, FBGEMM AUC can give a significantly
+different result.</p></li>
 </ul>
 </dd>
 </dl>
@@ -870,6 +875,48 @@ If k &gt;1, the input tensor must contain probabilities or logits for every clas
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">input</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">]])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">multiclass_accuracy</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
 <span class="go">tensor(0.5)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="torcheval.metrics.functional.multiclass_auroc">
+<span class="sig-prename descclassname"><span class="pre">torcheval.metrics.functional.</span></span><span class="sig-name descname"><span class="pre">multiclass_auroc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="(in PyTorch v1.12)"><span class="pre">Tensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="(in PyTorch v1.12)"><span class="pre">Tensor</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_classes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">average</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'macro'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="(in PyTorch v1.12)"><span class="pre">Tensor</span></a></span></span><a class="headerlink" href="#torcheval.metrics.functional.multiclass_auroc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute AUROC, which is the area under the ROC Curve, for multiclass classification.
+Its class version is <a class="reference internal" href="generated/torcheval.metrics.MulticlassAUROC.html#torcheval.metrics.MulticlassAUROC" title="torcheval.metrics.MulticlassAUROC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">torcheval.metrics.MulticlassAUROC</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input</strong> (<em>Tensor</em>) – Tensor of label predictions
+It should be probabilities or logits with shape of (n_sample, n_class).</p></li>
+<li><p><strong>target</strong> (<em>Tensor</em>) – Tensor of ground truth labels with shape of (n_samples, ).</p></li>
+<li><p><strong>num_classes</strong> (<em>int</em>) – Number of classes.</p></li>
+<li><p><strong>average</strong> (<em>str</em><em>, </em><em>optional</em>) – <ul>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">'macro'</span></code> [default]:</dt><dd><p>Calculate metrics for each class separately, and return their unweighted mean.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">None</span></code>:</dt><dd><p>Calculate the metric for each class separately, and return
+the metric for every class.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</p></li>
+</ul>
+</dd>
+</dl>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">torch</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">torcheval.metrics.functional</span> <span class="kn">import</span> <span class="n">multiclass_auroc</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">input</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">target</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">multiclass_auroc</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">num_classes</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="go">0.5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">multiclass_auroc</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">num_classes</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="go">tensor([0.0000, 0.3333, 0.6667, 1.0000])</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1567,6 +1614,51 @@ set of labels in target.</p></li>
 </div>
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="torcheval.metrics.functional.weighted_calibration">
+<span class="sig-prename descclassname"><span class="pre">torcheval.metrics.functional.</span></span><span class="sig-name descname"><span class="pre">weighted_calibration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="(in PyTorch v1.12)"><span class="pre">Tensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="(in PyTorch v1.12)"><span class="pre">Tensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="(in PyTorch v1.12)"><span class="pre">Tensor</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_tasks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor" title="(in PyTorch v1.12)"><span class="pre">Tensor</span></a></span></span><a class="headerlink" href="#torcheval.metrics.functional.weighted_calibration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute weighted calibration metric. When weight is not provided, it calculates the unweighted calibration.
+Its class version is <a class="reference internal" href="generated/torcheval.metrics.WeightedCalibration.html#torcheval.metrics.WeightedCalibration" title="torcheval.metrics.WeightedCalibration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">torcheval.metrics.WeightedCalibration</span></code></a>.</p>
+<p>weighted_calibration = sum(input * weight) / sum(target * weight)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input</strong> (<em>Tensor</em>) – Tensor of input values.</p></li>
+<li><p><strong>target</strong> (<em>Tensor</em>) – Tensor of binary targets</p></li>
+<li><p><strong>weight</strong> (<em>optional</em>) – Float or Int or Tensor of input weights. It is default to 1.0. If weight is a Tensor, its size should match the input tensor size.</p></li>
+<li><p><strong>num_tasks</strong> (<em>int</em>) – Number of tasks that need weighted_calibration calculation. Default value
+is 1.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The return value of weighted calibration for each task (num_tasks,).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tensor</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If value of weight is neither a <code class="docutils literal notranslate"><span class="pre">float</span></code> nor a <code class="docutils literal notranslate"><span class="pre">int</span></code> nor a <code class="docutils literal notranslate"><span class="pre">torch.Tensor</span></code> that matches the input tensor size.</p>
+</dd>
+</dl>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">torch</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">torcheval.metrics.functional</span> <span class="kn">import</span> <span class="n">weighted_calibration</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">weighted_calibration</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">]),</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]))</span>
+<span class="go">tensor([1.2])</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">weighted_calibration</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">]),</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]),</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">]))</span>
+<span class="go">tensor([1.1321])</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">weighted_calibration</span><span class="p">(</span>
+<span class="go">        torch.tensor([[0.8, 0.4], [0.8, 0.7]]),</span>
+<span class="go">        torch.tensor([[1, 1], [0, 1]]),</span>
+<span class="go">        num_tasks=2,</span>
+<span class="go">    ),</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tensor</span><span class="p">([</span><span class="mf">0.6000</span><span class="p">,</span> <span class="mf">1.5000</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
 </section>
 
 
@@ -1580,7 +1672,7 @@ set of labels in target.</p></li>
         <a href="torcheval.tools.html" class="btn btn-neutral float-right" title="tools" accesskey="n" rel="next">Next <img src="_static/images/chevron-right-orange.svg" class="next-page"></a>
       
       
-        <a href="torcheval.metrics.html" class="btn btn-neutral" title="Metrics" accesskey="p" rel="prev"><img src="_static/images/chevron-right-orange.svg" class="previous-page"> Previous</a>
+        <a href="generated/torcheval.metrics.WindowedBinaryNormalizedEntropy.html" class="btn btn-neutral" title="torcheval.metrics.WindowedBinaryNormalizedEntropy" accesskey="p" rel="prev"><img src="_static/images/chevron-right-orange.svg" class="previous-page"> Previous</a>
       
     </div>
   
@@ -1612,7 +1704,38 @@ set of labels in target.</p></li>
           <div class="pytorch-right-menu" id="pytorch-right-menu">
             <div class="pytorch-side-scroll" id="pytorch-side-scroll-right">
               <ul>
-<li><a class="reference internal" href="#">Functional Metrics</a></li>
+<li><a class="reference internal" href="#">Functional Metrics</a><ul>
+<li><a class="reference internal" href="#torcheval.metrics.functional.binary_accuracy"><code class="docutils literal notranslate"><span class="pre">binary_accuracy()</span></code></a></li>
+<li><a class="reference internal" href="#torcheval.metrics.functional.binary_auroc"><code class="docutils literal notranslate"><span class="pre">binary_auroc()</span></code></a></li>
+<li><a class="reference internal" href="#torcheval.metrics.functional.binary_binned_precision_recall_curve"><code class="docutils literal notranslate"><span class="pre">binary_binned_precision_recall_curve()</span></code></a></li>
+<li><a class="reference internal" href="#torcheval.metrics.functional.binary_confusion_matrix"><code class="docutils literal notranslate"><span class="pre">binary_confusion_matrix()</span></code></a></li>
+<li><a class="reference internal" href="#torcheval.metrics.functional.binary_f1_score"><code class="docutils literal notranslate"><span class="pre">binary_f1_score()</span></code></a></li>
+<li><a class="reference internal" href="#torcheval.metrics.functional.binary_normalized_entropy"><code class="docutils literal notranslate"><span class="pre">binary_normalized_entropy()</span></code></a></li>
+<li><a class="reference internal" href="#torcheval.metrics.functional.binary_precision"><code class="docutils literal notranslate"><span class="pre">binary_precision()</span></code></a></li>
+<li><a class="reference internal" href="#torcheval.metrics.functional.binary_precision_recall_curve"><code class="docutils literal notranslate"><span class="pre">binary_precision_recall_curve()</span></code></a></li>
+<li><a class="reference internal" href="#torcheval.metrics.functional.binary_recall"><code class="docutils literal notranslate"><span class="pre">binary_recall()</span></code></a></li>
+<li><a class="reference internal" href="#torcheval.metrics.functional.frequency_at_k"><code class="docutils literal notranslate"><span class="pre">frequency_at_k()</span></code></a></li>
+<li><a class="reference internal" href="#torcheval.metrics.functional.hit_rate"><code class="docutils literal notranslate"><span class="pre">hit_rate()</span></code></a></li>
+<li><a class="reference internal" href="#torcheval.metrics.functional.mean"><code class="docutils literal notranslate"><span class="pre">mean()</span></code></a></li>
+<li><a class="reference internal" href="#torcheval.metrics.functional.mean_squared_error"><code class="docutils literal notranslate"><span class="pre">mean_squared_error()</span></code></a></li>
+<li><a class="reference internal" href="#torcheval.metrics.functional.multiclass_accuracy"><code class="docutils literal notranslate"><span class="pre">multiclass_accuracy()</span></code></a></li>
+<li><a class="reference internal" href="#torcheval.metrics.functional.multiclass_auroc"><code class="docutils literal notranslate"><span class="pre">multiclass_auroc()</span></code></a></li>
+<li><a class="reference internal" href="#torcheval.metrics.functional.multiclass_binned_precision_recall_curve"><code class="docutils literal notranslate"><span class="pre">multiclass_binned_precision_recall_curve()</span></code></a></li>
+<li><a class="reference internal" href="#torcheval.metrics.functional.multiclass_confusion_matrix"><code class="docutils literal notranslate"><span class="pre">multiclass_confusion_matrix()</span></code></a></li>
+<li><a class="reference internal" href="#torcheval.metrics.functional.multiclass_f1_score"><code class="docutils literal notranslate"><span class="pre">multiclass_f1_score()</span></code></a></li>
+<li><a class="reference internal" href="#torcheval.metrics.functional.multiclass_precision"><code class="docutils literal notranslate"><span class="pre">multiclass_precision()</span></code></a></li>
+<li><a class="reference internal" href="#torcheval.metrics.functional.multiclass_precision_recall_curve"><code class="docutils literal notranslate"><span class="pre">multiclass_precision_recall_curve()</span></code></a></li>
+<li><a class="reference internal" href="#torcheval.metrics.functional.multiclass_recall"><code class="docutils literal notranslate"><span class="pre">multiclass_recall()</span></code></a></li>
+<li><a class="reference internal" href="#torcheval.metrics.functional.multilabel_accuracy"><code class="docutils literal notranslate"><span class="pre">multilabel_accuracy()</span></code></a></li>
+<li><a class="reference internal" href="#torcheval.metrics.functional.num_collisions"><code class="docutils literal notranslate"><span class="pre">num_collisions()</span></code></a></li>
+<li><a class="reference internal" href="#torcheval.metrics.functional.r2_score"><code class="docutils literal notranslate"><span class="pre">r2_score()</span></code></a></li>
+<li><a class="reference internal" href="#torcheval.metrics.functional.reciprocal_rank"><code class="docutils literal notranslate"><span class="pre">reciprocal_rank()</span></code></a></li>
+<li><a class="reference internal" href="#torcheval.metrics.functional.sum"><code class="docutils literal notranslate"><span class="pre">sum()</span></code></a></li>
+<li><a class="reference internal" href="#torcheval.metrics.functional.throughput"><code class="docutils literal notranslate"><span class="pre">throughput()</span></code></a></li>
+<li><a class="reference internal" href="#torcheval.metrics.functional.topk_multilabel_accuracy"><code class="docutils literal notranslate"><span class="pre">topk_multilabel_accuracy()</span></code></a></li>
+<li><a class="reference internal" href="#torcheval.metrics.functional.weighted_calibration"><code class="docutils literal notranslate"><span class="pre">weighted_calibration()</span></code></a></li>
+</ul>
+</li>
 </ul>
 
             </div>
@@ -1633,6 +1756,7 @@ set of labels in target.</p></li>
          <script src="_static/underscore.js"></script>
          <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
          <script src="_static/doctools.js"></script>
+         <script src="_static/sphinx_highlight.js"></script>
      
 
   
@@ -1703,19 +1827,43 @@ set of labels in target.</p></li>
           </ul>
         </div>
 
-        <div class="footer-links-col follow-us-col">
+        <div class="footer-links-col">
           <ul>
-            <li class="list-title">Stay Connected</li>
-          </ul>
-
-          <div class="footer-social-icons">
-            <a href="https://www.facebook.com/pytorch" target="_blank" class="facebook"></a>
-            <a href="https://twitter.com/pytorch" target="_blank" class="twitter"></a>
-            <a href="https://www.youtube.com/pytorch" target="_blank" class="youtube"></a>
+            <li class="list-title">Stay up to date</li>
+            <li><a href="https://www.facebook.com/pytorch" target="_blank">Facebook</a></li>
+            <li><a href="https://twitter.com/pytorch" target="_blank">Twitter</a></li>
+            <li><a href="https://www.youtube.com/pytorch" target="_blank">YouTube</a></li>
+            <li><a href="https://www.linkedin.com/company/pytorch" target="_blank">LinkedIn</a></li>
+          </ul>  
           </div>
+
+        <div class="footer-links-col">
+          <ul>
+            <li class="list-title">PyTorch Podcasts</li>
+            <li><a href="https://open.spotify.com/show/6UzHKeiy368jKfQMKKvJY5" target="_blank">Spotify</a></li>
+            <li><a href="https://podcasts.apple.com/us/podcast/pytorch-developer-podcast/id1566080008" target="_blank">Apple</a></li>
+            <li><a href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9mZWVkcy5zaW1wbGVjYXN0LmNvbS9PQjVGa0lsOA%3D%3D" target="_blank">Google</a></li>
+            <li><a href="https://music.amazon.com/podcasts/7a4e6f0e-26c2-49e9-a478-41bd244197d0/PyTorch-Developer-Podcast?" target="_blank">Amazon</a></li>
+          </ul>
+         </div>
         </div>
+        
+        <div class="privacy-policy">
+          <ul>
+            <li class="privacy-policy-links"><a href="https://www.linuxfoundation.org/terms/" target="_blank">Terms</a></li>
+            <li class="privacy-policy-links">|</li>
+            <li class="privacy-policy-links"><a href="https://www.linuxfoundation.org/privacy-policy/" target="_blank">Privacy</a></li>
+          </ul>
+        </div>
+        <div class="copyright">
+        <p>© Copyright The Linux Foundation. The PyTorch Foundation is a project of The Linux Foundation.
+          For web site terms of use, trademark policy and other policies applicable to The PyTorch Foundation please see
+          <a href="www.linuxfoundation.org/policies/">www.linuxfoundation.org/policies/</a>. The PyTorch Foundation supports the PyTorch open source
+          project, which has been established as PyTorch Project a Series of LF Projects, LLC. For policies applicable to the PyTorch Project a Series of LF Projects, LLC,
+          please see <a href="www.lfprojects.org/policies/">www.lfprojects.org/policies/</a>.</p>
       </div>
-    </div>
+     </div>
+
   </footer>
 
   <div class="cookie-banner-wrapper">
